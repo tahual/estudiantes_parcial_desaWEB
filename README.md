@@ -21,6 +21,48 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## API de Estudiantes (Parcial)
+
+### 1. Crear la base de datos
+
+En PostgreSQL crea la base `parcial` y ejecuta `db/estudiantes.sql`.
+
+### 2. Configurar conexión (opcional)
+
+Por defecto se conecta a `localhost:5432`, usuario `postgres`, contraseña `postgres`, base `parcial`.
+Se puede cambiar con las variables de entorno `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` y `PORT`,
+o editando `src/app.module.ts`.
+
+### 3. Ejecutar
+
+```bash
+npm install
+npm run start:dev
+```
+
+### Endpoints (`http://localhost:3000`)
+
+| Método | Ruta                 | Descripción                  |
+| ------ | -------------------- | ---------------------------- |
+| GET    | `/estudiantes`       | Listar todos                 |
+| GET    | `/estudiantes/:id`   | Obtener uno por id           |
+| POST   | `/estudiantes`       | Crear                        |
+| PUT    | `/estudiantes/:id`   | Actualizar                   |
+| PATCH  | `/estudiantes/:id`   | Actualizar parcialmente      |
+| DELETE | `/estudiantes/:id`   | Eliminar                     |
+
+Ejemplo de body para POST:
+
+```json
+{
+  "nombre": "Ana",
+  "apellido": "López",
+  "fecha_nacimiento": "2002-05-10",
+  "sexo": "F",
+  "carne": "2024001"
+}
+```
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
